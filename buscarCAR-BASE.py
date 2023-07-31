@@ -3,20 +3,11 @@ from selenium import webdriver
 from selenium.webdriver.firefox.options import Options
 import json
 
-lat = input("Digite a latitude: ")
-lng = input("Digite a longitude: ")
-# -15.531894
-# -47.367931
-
 # URL para a primeira requisição
-url1 = f"https://www.car.gov.br/publico/imoveis/getImovel?lat={lat}&lng={lng}"
-
-options = Options()
-options.add_argument('-headless')
-# options=options
+url1 = f"https://www.car.gov.br/publico/imoveis/getImovel?lat=-15.531894&lng=-47.367931"
 
 # Inicializar o navegador usando o Firefox com as opções configuradas
-driver = webdriver.Firefox(options=options)
+driver = webdriver.Firefox()
 
 try:
     # Faz a primeira requisição
